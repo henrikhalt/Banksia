@@ -179,8 +179,23 @@ History
 GUI
 ----
 
-I started working on a graphic user interface app based on Banksia. It can be downloaed at https://banksiagui.com
+I started working on a graphic user interface app based on Banksia. It can be downloaded at https://banksiagui.com. 
 
+### Install BanksiaGUI on Windows 
+On Windows, **Banksia GUI** is also available as a chocolatey package which may be installed from elevated (*Run as Administrator*) *cmd* or *PowerShell* with
+```powershell
+choco install banksiagui -y
+```
+This requires the free chocolatey client to be installed, see https://chocolatey.org/install, or use the code block below in elevated (*Run ss Administrator*) Powershell:
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+```
+Additionally, you may use Chocolatey to install the engines *Stockfish* and *Leela Chess Zero* to use with Banskia GUI:  
+```powershell
+choco install stockfish -y
+choco install lc0 -y
+```
+The engines will be downloaded to a folder `C:\Program Files\ChessEngines`, and you will have to manually configure Banksia GUI to use the engines after installation. 
 
 Terms of use
 ---------------
